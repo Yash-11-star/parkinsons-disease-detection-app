@@ -1,11 +1,24 @@
+# Node
 node_modules/
-wandb/
-Backend/drawings/
-Backend/spiral_model/
-Backend/spiral_model_new/
-Backend/wave_model/
-Backend/wave_model_new_new/
-wave_model_new/
 dist/
-.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Models
+Backend/*.joblib
+Backend/*model*
+Backend/wave_model_new/
+
+# Dataset
+Backend/drawings/
+Backend/*.zip
+
+# Logs
+wandb/
 *.log
+
+# System
+.DS_Store
+.env
