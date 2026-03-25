@@ -6,19 +6,31 @@ dist/
 __pycache__/
 *.pyc
 
-# Models
-Backend/*.joblib
-Backend/*model*
-Backend/wave_model_new/
-
-# Dataset
-Backend/drawings/
-Backend/*.zip
-
-# Logs
+# Ignore audio models/files
+Backend/Audio_*.joblib
+Backend/Updated_Audio_model.joblib
+Backend/scaler.joblib
+Backend/selector.joblib
+Backend/models/
+Backend/AudioDataset/
+Backend/wandb/
 wandb/
-*.log
 
-# System
+# Ignore drawing/raw dataset folder, but keep the zip
+Backend/drawings/
+
+# Ignore other model folders
+Backend/spiral_model/
+Backend/spiral_model_new/
+Backend/wave_model/
+Backend/wave_model_new_new/
+wave_model_new/
+
+# Keep these zip files in repo
+!Backend/AudioDataset.zip
+!Backend/drawings.zip
+
+# Logs/system
+*.log
 .DS_Store
 .env
