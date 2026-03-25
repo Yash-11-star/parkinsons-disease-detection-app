@@ -1,6 +1,10 @@
 node_modules/
 wandb/
 Backend/drawings/
+Backend/spiral_model/
+Backend/spiral_model_new/
+Backend/wave_model/
+Backend/wave_model_new_new/
 wave_model_new/
 dist/
 .env
