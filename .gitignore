@@ -21,6 +21,7 @@ wandb/
 
 # Ignore drawing/raw dataset folder, but keep the zip
 Backend/drawings/
+Backend/trash/
 
 # Ignore other model folders
 Backend/spiral_model/
