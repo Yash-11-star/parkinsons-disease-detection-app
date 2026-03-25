@@ -1,0 +1,63 @@
+.ni:hover
+{
+    background-color: rgb(197, 90, 90);
+}
+
+.navbar
+{
+    margin-top: 10px !important;
+    height: 70px;
+    background-image: url("C:/Users/khush/Documents/Project/Frontend/ParkinsonsDisease/src/assets/bg purple.jpg");
+    background-size: cover;
+}
+.centering
+{
+    margin-left: auto; 
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+}
+
+.logout:hover
+{
+ cursor: pointer;
+}
+
+/* Chatbot container styling */
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999; /* Ensure chatbot stays on top */
+    background-color: transparent;
+    border: none;
+  }
+  
+  /* Chatbot styling */
+  .chatbot {
+    /* Add styling for chatbot UI */
+    width: 300px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    background-color: #ffffff;
+    border: 1px solid #3f51b5;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Add vertical scrollbar */
+
+    
+}
+  .chatbot img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .chatbot button {
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: justify;
+  }
+  .chatbot p {
+    margin-left: 10px;
+  }
+  

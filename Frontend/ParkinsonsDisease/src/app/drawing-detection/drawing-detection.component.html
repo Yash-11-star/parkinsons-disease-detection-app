@@ -1,0 +1,58 @@
+<div class="container-fluid">
+  <div class="row" style="padding: 0;margin: 0;justify-content: space-between; text-align: center; overflow: hidden;">
+    <div class="row" style="text-align: center; margin-top: 40px; width: 100%;">
+      <p style="font-size: 40px; font-weight: 700;color: #3f51b5;">Drawing-based Disease Detection</p>
+    </div>
+    <div style="text-align: center;">
+      <p style="color: black; font-size: 20px;">State which type of drawing you want to detect: </p> 
+      <select class="btn btn-success" #type (change)="getVal(type.value)" >
+      <option value="wave">Wave</option>
+      <option value="spiral">Spiral</option>
+      </select>
+      <!-- <input type="text" name="type" id="type" #type />
+        <button (click)="getVal(type.value)">Click</button> -->
+    </div>
+
+    <div class="row" style="margin-top: 10vh;">
+      @if ( val != null && val != undefined && val != "" ) 
+      {
+              @if (val == 'spiral') 
+              {
+                <div class="col my-auto centering" style="color: black; font-size: larger;">
+                  <p style="font-size: 30px;">Upload the Spiral handmade drawing which is to be detected: </p> <br>
+                  <input type="file" (change)="onFileSelected($event)">
+                  <button class="btn btn-primary" (click)="uploadSpiralImage()">Upload Spiral Drawing</button>
+                </div>
+              }
+              @else {
+                <div class="col my-auto centering" style="color: black; font-size: larger;">
+                  <p style="font-size: 30px;">Upload the Wave handmade drawing which is to be detected: </p> <br>
+                  <input type="file" (change)="onFileSelected($event)">
+                  <button class="btn btn-primary" (click)="uploadWaveImage()">Upload Wave Drawing</button>
+                </div>  
+              }
+      }
+      
+      
+
+      <div class="row" style="text-align: center; margin-top: 20px; width: 100%; color: black;">
+        <div style="margin-top: 20px;">
+          @if (detectionResult != null && detectionResult != undefined && detectionResult != "")
+          {
+                @if (detectionResult >= 50)
+                {
+                <div> Person is having higher chance of affected with Parkinson's Disease with chance of
+                  {{detectionResult}} % </div>
+                }
+                @else if (detectionResult < 50) { <div> Person is having lower chance of affected with Parkinson's Disease
+                  with chance of
+                  {{detectionResult}} %
+                  </div>
+                } 
+          }
+        
+
+      </div>
+    </div>
+  </div>
+</div>

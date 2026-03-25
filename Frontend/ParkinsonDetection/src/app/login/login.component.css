@@ -1,0 +1,28 @@
+.ni:hover
+{
+    background-color: rgb(217, 192, 192);
+}
+
+.navbar
+{
+    background: linear-gradient(90deg, rgba(136,133,180,1) 2%, rgba(91,91,145,1) 35%, rgba(27,101,116,1) 100%) !important;
+    border-bottom: 1.5px solid black;
+}
+.centering
+{
+    margin-left: auto; 
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+}
+
+.card.glow-effect {
+    border: none;
+    margin-top: 40px;
+    box-shadow: 0 0 10px rgba(136,133,180,1); /* Adjust the color and intensity as needed */
+    transition: box-shadow 0.3s ease-in-out; /* Optional: Add a smooth transition effect */
+}
+
+.card.glow-effect:hover {
+    box-shadow: 0 0 20px rgba(136,133,180,1); /* Adjust the color and intensity for the hover effect */
+}

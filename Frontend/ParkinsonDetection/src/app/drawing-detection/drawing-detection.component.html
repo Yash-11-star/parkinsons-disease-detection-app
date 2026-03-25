@@ -1,0 +1,72 @@
+<div class="container-fluid">
+    <div class="row" style="padding: 0;margin: 0;justify-content: space-between; text-align: center; overflow: hidden;">
+      <div class="row" style="text-align: center; margin-top: 40px; width: 100%;">
+        <p style="font-size: 40px; font-weight: 700;color: #3f51b5;">Drawing-based Disease Detection</p>
+      </div>
+      <div style="text-align: center; margin-top: 20px;" class="box-shadow">
+        <p style="color: black; font-size: 20px; margin-top: 30px;">State which type of drawing you want to detect: </p> 
+        <select class="btn btn-success" style="margin-top: 20px; margin-bottom: 20px; font-size: 25px;" #type (change)="getVal(type.value)" >
+        <option value="wave">Wave</option>
+        <option value="spiral">Spiral</option>
+        </select>
+        <!-- <input type="text" name="type" id="type" #type />
+          <button (click)="getVal(type.value)">Click</button> -->
+      </div>
+  
+      <div class="row" style="margin-top: 10vh;">
+        @if ( val != null && val != undefined && val != "" ) 
+        {
+                @if (val == 'spiral') 
+                {
+                  <div class="col my-auto centering" style="color: black; font-size: larger;">
+                    <p style="font-size: 30px; font-weight: 700;">Upload the Spiral handmade drawing which is to be detected: </p> <br>
+                    <input type="file" class="custom-file-upload" (change)="onFileSelected($event)">
+                    <button class="btn btn-primary" (click)="uploadSpiralImage()">Upload Spiral Drawing</button>
+                    @if (uploadInProgress) 
+                    {
+                      <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+                        <mat-spinner diameter="30" color="primary"></mat-spinner> <br>
+                        Please wait
+                      </div>
+                    }
+                  </div>
+                }
+                @else {
+                  <div class="col my-auto centering" style="color: black; font-size: larger;">
+                    <p style="font-size: 30px; font-weight: 700;">Upload the Wave handmade drawing which is to be detected: </p> <br>
+                    <input type="file" class="custom-file-upload" (change)="onFileSelected($event)">
+                    <button class="btn btn-primary" (click)="uploadWaveImage()">Upload Wave Drawing</button>
+                    @if (uploadInProgress) 
+                    {
+                      <div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+                        <mat-spinner diameter="30" color="primary"></mat-spinner> <br>
+                        Please wait
+                      </div>
+                    }
+                  </div>  
+                }
+        }
+        
+        
+  
+        <div class="row" style="text-align: center; margin-top: 20px; width: 100%; color: black; margin-bottom: 20px;">
+          <div style="margin-top: 20px;">
+            @if (detectionResult != null && detectionResult != undefined && detectionResult != "")
+            {
+                  @if (detectionResult >= 50)
+                  {
+                  <div style="font-size: 20px;"> Person is having <span style="color: red;">higher</span> chance of affected with Parkinson's Disease with chance of
+                    <span style="color: red; font-weight: bold;">{{detectionResult}} %</span>
+                  </div>
+                  }
+                  @else if (detectionResult < 50) { <div style="font-size: 20px;"> Person is having <span style="color: green;">lower</span> chance of affected with Parkinson's Disease
+                    with chance of <span style="color: green; font-weight: bold;">{{detectionResult}} %</span>
+                    </div>
+                  } 
+            }
+          
+  
+        </div>
+      </div>
+    </div>
+  </div>

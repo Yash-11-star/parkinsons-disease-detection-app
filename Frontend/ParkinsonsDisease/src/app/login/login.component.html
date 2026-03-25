@@ -1,0 +1,20 @@
+<div class="container" style="margin-top: 50px; height: 100vh;">
+
+    <div class="centering" style="padding: 0;margin: 0;justify-content: space-between; text-align: center; overflow: hidden; 
+      height: 100vh; ;">
+      <h4 style="color: #3f51b5; font-family: sans-serif; font-size: 40px; font-weight: 700;">Welcome to Parkinson's
+        Disease Detector</h4>
+        <h4 style="color: red; margin-top: 60px;">Enter login details </h4>
+        <div class="centering input-group mb-3" style="width: 30%; margin-top: 30px;">
+            <span class="input-group-text" id="basic-addon1">Username</span>
+            <input #username type="text" class="form-control" placeholder="Enter username" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="centering input-group mb-3" style="width: 30%; margin-top: 30px;">
+            <span class="input-group-text" id="basic-addon1">Password</span>
+            <input #password type="password" class="form-control" placeholder="Enter password" aria-label="Password" aria-describedby="basic-addon1">
+        </div>
+        <button class="btn btn-success" (click) = "getDetails(username.value,password.value)">Login</button>
+    </div>      
+  
+  
+</div>

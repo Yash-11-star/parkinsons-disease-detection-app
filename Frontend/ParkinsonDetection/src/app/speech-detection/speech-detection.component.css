@@ -1,0 +1,12 @@
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;   
+}
+
+.box-shadow
+{
+ box-shadow: 0 0 20px rgba(136,133,180,1); /* Adjust the color and intensity for the hover effect */
+
+}
