@@ -1,6 +1,7 @@
 node_modules/
 wandb/
+Backend/drawings/
+wave_model_new/
 dist/
 .env
 *.log
-.DS_Store
